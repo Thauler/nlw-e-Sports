@@ -1,9 +1,11 @@
 import express, { Request, Response } from 'express';
+import routes from './routes';
 
 const app = express()
 
-// app.use(express.json())
+app.use(express.json())
 
-app.get('/', (request: Request, response: Response) => response.send('Funfando'))
+
+app.use(routes)
 
 app.listen(3001)
